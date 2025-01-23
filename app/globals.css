@@ -98,3 +98,15 @@ body {
     padding-right: 0.25rem; 
   }
 }
+
+.active {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.carousel-item {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+

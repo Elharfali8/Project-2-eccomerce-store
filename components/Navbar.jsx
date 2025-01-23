@@ -10,7 +10,7 @@ export default function Navbar() {
     
 
   return (
-    <nav className="w-full h-20 bg-card text-card-foreground shadow-md grid place-items-center dark:shadow-muted">
+    <nav className=" fixed top-0 right-0 left-0 w-full h-20 bg-card text-card-foreground shadow-md grid place-items-center dark:shadow-muted">
       <div className="container main-container flex items-center justify-between">
         {/* Logo */}
         <Link href='/' className="text-2xl lg:text-3xl font-bold px-4 py-1 rounded tracking-wide hover:tracking-wider">Vivid<span className="text-primary">Commerce</span></Link>
