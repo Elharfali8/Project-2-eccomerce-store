@@ -16,7 +16,7 @@ export function ThemToggle() {
   const { setTheme } = useTheme();
 
   return (
-    <DropdownMenu>
+    <DropdownMenu className='z-[99]'>
       <DropdownMenuTrigger asChild>
         <Button variant='outline' size='icon' className='bg-muted'>
           <Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
@@ -24,7 +24,7 @@ export function ThemToggle() {
           <span className='sr-only'>Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align='end'>
+      <DropdownMenuContent align='end' className='z-[99]'>
         <DropdownMenuItem onClick={() => setTheme('light')}>
           Light
         </DropdownMenuItem>

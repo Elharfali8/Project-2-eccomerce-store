@@ -1,4 +1,4 @@
-import { pic1, pic2, pic3 } from "@/assets"
+import { books, clothes, elect, kitchen, pic1, pic2, pic3, sports } from "@/assets"
 
 
 export const data = [
@@ -97,4 +97,13 @@ export const pics = [
         id: 3,
         img: pic3,
     },
+]
+
+
+export const categoriesData = [
+    {id: 1, title: 'electronics', img: elect},
+    {id: 2, title: 'kitchen', img: kitchen},
+    {id: 3, title: 'books', img: books},
+    {id: 4, title: 'sports', img: sports},
+    {id: 5, title: 'clothes', img: clothes},
 ]
