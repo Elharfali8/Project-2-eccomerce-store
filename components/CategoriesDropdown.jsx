@@ -18,7 +18,7 @@ export function CategoriesDropdown({title, childs}) {
       <DropdownMenuTrigger asChild>
               <Button className='bg-transparent text-card-foreground text-lg lg:text-xl capitalize hover:text-primary hover:bg-transparent tracking-wide px-3 focus:outline-none' >{title} <ChevronsDown  /></Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-56 z-[99]">
         <DropdownMenuLabel className='text-lg'>Categories:</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
