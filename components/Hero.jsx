@@ -9,7 +9,7 @@ const Hero = () => {
               <div className=''>
                   <h1 className='text-3xl md:text-5xl xl:text-6xl font-semibold tracking-wide mb-2 lg:mb-3 text-primary'>Find Everything You Need, All in One Place</h1>
                   <p className='text-gray-700 dark:text-gray-300 text-lg sm:text-xl xl:text-2xl mb-4 lg:mb-6'>Explore our curated collections of top-quality products, from electronics to sports gear. Shop smarter, live better.</p>
-                  <FormInput type='text' name='search' />
+                  <FormInput type='text' name='search' btn />
               </div>
               <div className='hidden lg:block'>
                   <HeroCarousel />

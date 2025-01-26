@@ -39,7 +39,7 @@ export const navLinks = [
     },
     {
         id: 3,
-        title: 'deals',
-        path: '/deals'
+        title: 'favorites',
+        path: '/favorites'
     },
 ]

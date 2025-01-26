@@ -1,13 +1,19 @@
+'use client'
+
 import Filters from '@/components/Filters'
 import { MainCard } from '@/components/MainCard'
 import { data } from '@/utils/data'
 import React from 'react'
+import { useSelector } from 'react-redux'
 
-const page = () => {
+const ProductsPage = () => {
+  const { isLoading, products, sortBy } = useSelector((store) => store.products)
+  
+
   return (
       <main className='mt-20 min-h-[calc(100vh-80px)] bg-muted'>
           <div className="container main-container py-12 lg:py-16">
-              <Filters />
+              <Filters sortBy={sortBy} />
         <div className='my-6 lg:my-10'>
           <div className='flex items-center justify-between gap-x-4'>
             <p className='text-lg lg:text-xl capitalize font-semibold flex items-center'>
@@ -26,4 +32,4 @@ const page = () => {
   )
 }
 
-export default page
+export default ProductsPage
