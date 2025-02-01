@@ -1,44 +1,32 @@
-'use client'
+import React from 'react'
+import { Label } from './ui/label'
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Label } from './ui/label';
-
-const SelectInput = ({ name, data}) => {
-
-
-    return (
+const SelectInput = ({ 
+  name,
+   data,
+   defaultValue,
+  value,
+  onChange
+}) => {
+  
+  return (
       <div className="grid w-full items-center ">
-        <Label htmlFor={name} className="mb-1 capitalize lg:text-lg">
+        <Label htmlFor={name} className=" capitalize lg:text-lg">
           {name}
-        </Label>
-        <Select
-        >
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder={'Select an option'} />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              {Array.isArray(data) &&
-                data.map((item, index) => (
-                  <SelectItem key={item.id || index} value={item.title || item}>
-                    {item.title || item}
-                  </SelectItem>
-                ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
-    );
-  };
-  
-  
+      </Label>
+      <select name={name} className='h-[40px] bg-white px-2 border border-gray-200 rounded-lg focus:border-[2px] focus:border-primary focus:outline-none dark:bg-gray-900 dark:text-white  lg:text-lg' value={value} onChange={onChange}>
+      <option value={defaultValue} className=' capitalize'>{defaultValue}</option>
+        {data.map((item, index) => {
+          return (
+            <option className=' capitalize' value={item.title || item} key={item.id || index}>
+              {item.title || item}
+            </option>
+          )
+        })}
+      </select>
+      
+    </div>
+  )
+}
 
-export default SelectInput;
+export default SelectInput
